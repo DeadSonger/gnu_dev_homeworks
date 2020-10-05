@@ -5,3 +5,5 @@
 
 [Лекция 2: Hello, World](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/02_BuildReq "Первое задание")
 
+[Лекция 3: Show](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/03_TerminalProject "Второе задание")
+
