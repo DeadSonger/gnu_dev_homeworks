@@ -20,6 +20,7 @@ typedef struct State_
 {
 	WINDOW* window;
 	FileInfo* fileInfo;
+	size_t symbolsForLineNumber;
 	size_t xOffset;
 	size_t yOffset;
 	size_t screenWidth;
@@ -132,6 +133,15 @@ void initState(State* state, WINDOW* window, FileInfo* fileInfo)
 	state->window = window;
 	getmaxyx(window, state->screenHeight, state->screenWidth);
 
+
+	size_t tmp = fileInfo->numLines;
+	state->symbolsForLineNumber = 0;
+	while (tmp > 0)
+	{
+		tmp /= 10;
+		state->symbolsForLineNumber += 1;
+	}
+
 	state->xOffset = 0;
 	state->yOffset = 0;
 	state->needExit = false;
@@ -145,19 +155,22 @@ void prepareScreen(const State* state)
 	
 	box(state->window, 0, 0);
 	char format[256] = {0};
-	sprintf(format, "%%.%ds", state->screenWidth - 2);
-	for (size_t i = 1; i < state->screenHeight - 1; ++i)
+	sprintf(format, "%%%ldld: %%.%ds", state->symbolsForLineNumber, state->screenWidth - 2);
+	for (size_t i = 0; i < state->screenHeight - 2; ++i)
 	{
 		size_t lineNumber = state->yOffset + i;
 		if (lineNumber >= state->fileInfo->numLines)
 			break;
 
-		size_t len = state->fileInfo->linesOffsets[lineNumber + 1] - state->fileInfo->linesOffsets[lineNumber] - 1;
-		if (state->xOffset + 2 >= len)
+		size_t len = state->fileInfo->linesOffsets[lineNumber + 1] - state->fileInfo->linesOffsets[lineNumber];
+		if (state->xOffset > len)
+		{
+			mvwprintw(state->window, i+1, 1, format, lineNumber+1, "");
 			continue;
-		
+		}
+
 		const char* line = state->fileInfo->buffer + state->fileInfo->linesOffsets[lineNumber] + state->xOffset;
-		mvwprintw(state->window, i, 1, format, line); 
+		mvwprintw(state->window, i+1, 1, format, lineNumber+1, line); 
 	}
 	wmove(state->window, 0, 0);
 	wrefresh(state->window);
