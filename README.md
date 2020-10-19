@@ -9,3 +9,5 @@
 
 [Лекция 4: Multifile](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/04_Multifile "Третье задание")
 
+[Лекция 5: Enviromental](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/05_Environmental "Пятое задание")
+
