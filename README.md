@@ -11,5 +11,5 @@
 
 [Лекция 5: Enviromental](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/05_Environmental "Четвертое задание")
 
-[Лекция 4: Debugging](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/06_Debugging "Пятое задание")
+[Лекция 6: Debugging](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/06_Debugging "Пятое задание")
 
