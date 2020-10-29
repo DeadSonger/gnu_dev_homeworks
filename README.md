@@ -13,3 +13,5 @@
 
 [Лекция 6: Debugging](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/06_Debugging "Пятое задание")
 
+[Лекция 7: DebuggingTracing](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/07_DebuggingTracing "Шестое задание")
+
