@@ -15,3 +15,5 @@
 
 [Лекция 7: DebuggingTracing](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/07_DebuggingTracing "Шестое задание")
 
+[Лекция 8: TestingCoverage](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/08_TestingCoverage "Седьмое задание")
+
