@@ -17,3 +17,4 @@
 
 [Лекция 8: TestingCoverage](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/08_TestingCoverage "Седьмое задание")
 
+[Лекция 9: I18nL10n](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/09_I18nL10n "Восьмое задание")
