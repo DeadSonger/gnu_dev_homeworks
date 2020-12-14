@@ -22,3 +22,6 @@
 [Лекция 10: Documenting](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/10_Documenting "Девятое задание")
 
 [Лекция 11: Toolkits](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/11_Toolkits "Десятое задание")
+
+[Лекция 13: Toolkits](https://github.com/DeadSonger/gnu_dev_homeworks/tree/master/13_PatchInstall "Двенадцатое задание")
+
